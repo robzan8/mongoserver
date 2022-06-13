@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Table</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+    <style>
+      html {
+        font-family: 'Lato', sans-serif;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Time</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Temperature</th>
+        <th>Humidity</th>
+        <th>Brightness</th>
+      </tr>
+      {{range .}}
+      <tr>
+        <td>{{.Time}}</td>
+        <td>{{.Lat}}</td>
+        <td>{{.Lon}}</td>
+        <td>{{.Temp}}</td>
+        <td>{{.Hum}}</td>
+        <td>{{.Bright}}</td>
+      </tr>
+      {{end}}
+    </table>
+  </body>
+</html>
